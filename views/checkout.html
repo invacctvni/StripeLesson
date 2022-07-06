@@ -13,15 +13,16 @@
           class="product_img"
         />
         <div class="description">
-          <h3>iPhone 12</h3>
-          <h4>&#8377 100.00</h4>
+          <h3>iPhone 14 Max Pro</h3>
+<!--          <h4>&#8377 100.00</h4>-->
+          <h4>$ 100.00</h4>
         </div>
         <button type="button" id="btn">BUY</button>
       </div>
   </body>
   <script type="text/javascript">
     // Create an instance of the Stripe object with your publishable API key
-    var stripe = Stripe("Add your publishable key");
+    var stripe = Stripe("pk_test_51LILdXEM3Fdgo87B2s61PDiIewOZMVXTwYkvoCOrvmnNlQJsQnWf04fe9JojKalcWIoMtLQUf2h9yCXnzUDrwglf00RyMDTsNL");
     var checkoutButton = document.getElementById("btn");
 
     checkoutButton.addEventListener("click", function () {
@@ -33,7 +34,7 @@
                 "name": "iPhone 12", 
                 "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-purple-select-2021?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1617130317000", 
                 "amount": 100,
-                "quantity": 1
+                "quantity": 1,
             }})
       })
         .then(function (response) {

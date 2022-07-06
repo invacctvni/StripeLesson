@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const stripe = require("stripe")("Add your secret key");
+const stripe = require("stripe")("sk_test_51LILdXEM3Fdgo87BqlhoYnDgQZ6bJzaBATb0X3uxD6cN8ZUmG4UmjhwNasudUKaGgKWblmPcubGPORP8FDPsdvjE00TdRMeUUS");
 
 const YOUR_DOMAIN = "http://localhost:8080";
 
@@ -19,7 +19,7 @@ app.post("/payment", async (req, res) => {
         line_items: [
             {
                 price_data: {
-                    currency: "inr",
+                    currency: "cad",
                     product_data: {
                         name: product.name,
                         images: [product.image],
